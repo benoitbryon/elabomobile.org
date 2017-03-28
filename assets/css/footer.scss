@@ -1,9 +1,11 @@
 footer {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: $footer-height;
+  }
   width: 100%;
-  height: $footer-height;
   padding: 0;
   border-width: 0px 0 0 0;
   border-style: solid;
@@ -21,12 +23,15 @@ footer {
         font-size: 1rem;
         margin: 0 auto;
         font-family: $font-subtitle;
-	@include make-col-ready(100%);
-        @include make-col(6);
+	@include make-col-ready();
+        &.copyright {
+          @include make-col(8);
+        }
 	a {
           color: #e0e0e0;
 	}
 	&.contacts {
+          @include make-col(4);
 	  text-align: right;
           font-family: $font-standard;
 	}

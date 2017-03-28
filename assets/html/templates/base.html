@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <!-- Content. -->
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <meta name="description" content="L'élabomobile, coworking nomade de Bayonne Saint Esprit, laboratoire solidaire et éco-responsable, propulsion collective.">
+    <meta name="description" content="L'élabomobile, rendez-vous d'émulation créative.">
     <meta name="author" content="Benoît Bryon">
     <meta name="robots" content="index, follow">
     <!-- Feeds. -->
@@ -47,15 +47,38 @@
     <![endif]-->
   {% endblock head %}
 </head>
-<body id="{% block body_id %}{% endblock %}">
+<body id="{% block body_id %}{% endblock %}" class="{% block body_classes %}{% endblock %}">
+  <header>
+    <nav>
+      <div>
+        {% block logo %}
+          <a id="logo" href="/">l'élabomobile</a>
+        {% endblock %}
+        <ul>
+          <!--<li{% if page_name=='index' %} class="active"{% endif %}><a href="/" title="elabomobile.org"{% if page_name=='index' %} disabled="1"{% endif %}><span class="fa fa-home" aria-hidden="true"></span></a></li>-->
+          {% for page_item in pages %}
+            <li{% if page and page.url==page_item.url %} class="active"{% endif %}>
+              <a href="{{ page_item.url }}"{% if page and page.url==page_item.url %} disabled="1"{% endif %}>
+                {{ page_item.title }}
+              </a>
+            </li>
+          {% endfor %}
+          <li>
+            <a href="/#coordonnees"><span class="fa fa-id-card"> </span> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   {% block content %}{% endblock %}
   <footer>
     <div>
       <div>
-        <p class="copyright">&copy; l'élabomobile, 2016</p>
+        <p class="copyright">&copy; l'élabomobile, 2016&ndash;2017</p>
         <p class="contacts">
           <a href="mailto:contact@elabomobile.org"><span class="fa fa-envelope"> </span></a>
           <a href="https://github.com/benoitbryon/elabomobile.org/"><span class="fa fa-github"> </span></a>
+          <a href="https://www.facebook.com/elabomobile"><span class="fa fa-facebook-official"> </span></a>
         </p>
       </div>
     </div>

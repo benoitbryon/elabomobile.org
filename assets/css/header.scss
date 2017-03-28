@@ -7,42 +7,48 @@ header {
     @extend .navbar-light;
     padding: 0;
     border-width: 0px;
-    border-style: solid;
-    border-color: #13bceb;
-    background-color: rgba(#36c3ea, 1);
+    background-color: rgba(#ffffff, 1);
     height: $header-height;
     > div {
       @extend .container;
-      #logo {
+      #logo, #logo:hover {
         @extend .navbar-brand;
-	padding: 0;
-	margin: 0;
-	font-family: $font-title;
-	line-height: $header-height;
-	font-size: 2rem;
+        padding: 0;
+        margin: 0;
+        font-family: $font-title;
+        line-height: $header-height;
+        font-size: 2rem;
+        color: $color-title;
       }
       > ul {
         @extend .nav;
-	@extend .navbar-nav;
+        @extend .navbar-nav;
         float: right;
         li {
           @extend .nav-item;
+          padding: 0;
+          margin: 0 !important;
           a {
             @extend .nav-link;
             height: $header-height;
-            padding: 5px 5px 0 5px;
-            line-height: 30px;
+            padding: 0 10px 5px 10px;
+            border-color: transparent;
+            border-width: 10px 0 0 0;
+            border-style: solid;
+            line-height: $header-height - 15px;
             text-align: center;
-	    font-family: $font-subtitle;
-            font-size: 1.1rem;
+            font-family: $font-subtitle;
+            font-size: 1.2rem;
             color: rgba(0, 0, 0, 0.6);
-            span {
-              display: block;
-	      line-height: 15px;
-              font-family: $font-standard;
-              font-weight: normal;
-              font-size: 0.8rem;
-              color: rgba(0, 0, 0, 0.3);
+            &:hover {
+              color: #333;
+              border-color: $color-subtitle;
+            }
+          }
+          &.active {
+            a, a:active, a:hover {
+              color: $color-subtitle;
+              border-color: $color-title;
             }
           }
         }

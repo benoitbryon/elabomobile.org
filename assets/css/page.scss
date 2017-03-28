@@ -1,0 +1,41 @@
+body.page {
+  section {
+    > div {
+      @include make-container();
+      @include media-breakpoint-up(lg) {
+        @include make-container-max-widths();
+      }
+      > div {
+        @include make-row();
+        padding-top: $header-height;
+        padding-bottom: $header-height;
+        h1 {
+          @include make-col-ready();
+          @include make-col(12);
+          @include media-breakpoint-up(xs) { font-size: 1.5rem; }
+          @include media-breakpoint-up(sm) { font-size: 1.8rem; }
+          @include media-breakpoint-up(md) { font-size: 2rem; }
+          @include media-breakpoint-up(lg) { font-size: 3rem; }
+          @include media-breakpoint-up(xl) { font-size: 4rem; }
+          line-height: .9em;
+          color: $color-subtitle;
+        }
+        .section {
+          @include make-col-ready();
+          @include make-col(6);
+        }
+      }
+    }
+  }
+  &#page-qui {
+    section {
+      > div {
+        > div {
+          .section {
+            @include make-col(6);
+          }
+        }
+      }
+    }
+  }
+}

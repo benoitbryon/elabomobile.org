@@ -6,6 +6,14 @@
   transition: $transition;
 }
 
+@mixin media-map-up($property, $xs, $sm, $md, $lg, $xl) {
+  @include media-breakpoint-up(xs) { #{$property}: $xs }
+  @include media-breakpoint-up(sm) { #{$property}: $sm }
+  @include media-breakpoint-up(md) { #{$property}: $md }
+  @include media-breakpoint-up(lg) { #{$property}: $lg }
+  @include media-breakpoint-up(xl) { #{$property}: $xl }
+}
+
 @mixin show-size {
   @include media-breakpoint-up(xs) { background-color: purple; }
   @include media-breakpoint-up(sm) { background-color: cyan; }

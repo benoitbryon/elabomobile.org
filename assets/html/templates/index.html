@@ -1,30 +1,58 @@
 {% extends "base.html" %}
 
 {% block body_id %}index{% endblock %}
-{% block title %}L'élabomobile &ndash; Coworking nomade à Bayonne St Esprit{% endblock %}
+{% block title %}L'élabomobile &ndash; Rendez-vous d'émulation créative{% endblock %}
+{% block logo %}{% endblock %}
 
 {% block content %}
-
-  {# Articles #}
   <section id="tagline">
     <div>
       <div>
         <h1>l'élabomobile</h1>
-        <p>
-          Coworking nomade à Bayonne St Esprit<br />
-          laboratoire solidaire et éco-responsable<br />
-          propulsion collective.
-        </p>
+        <blockquote>
+          <strong>Rendez-vous</strong> dans des lieux inspirants,
+          <br />
+          pratiquons l'<strong>émulation</strong> créative&nbsp;!
+        </blockquote>
       </div>
     </div>
+  </section>
+
+  <section id="rendezvous">
+    <div>
+      <div>
+        <article>
+          <img src="/img/grenadine.jpg" />
+          <h2>Journée de lancement&nbsp;!</h2>
+          <p class="date">
+            <span class="dayname">Lundi</span>
+            <span class="day">3</span>
+            <span class="month">avril</span>
+          </p>
+          <p class="location">
+            chez <a href="http://www.grenadine-et-crayonnade.fr/plan-dacces/">Grenadine et Crayonnade</a>, Anglet
+          </p>
+          <ul>
+            <li><span class="fa fa-cogs fa-fw"> </span> Co-création de l'élabomobile</li>
+            <li><span class="fa fa-graduation-cap fa-fw"> </span> MOOC &laquo;&nbsp;Gouvernance partagée&nbsp;&raquo;</li>
+            <li><span class="fa fa-comments-o fa-fw"> </span> Coworking</li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn-primary btn-lg" href="https://goo.gl/forms/T4KjlZco8vYIK0va2"><span class="fa fa-sign-in"> </span> Je m'inscris</a>
+            <a class="btn btn-secondary" href="https://mailchimp.com"><span class="fa fa-envelope"> </span> Je m'abonne à la newsletter</a>
+          </div>
+        </article>
+      <div>
+    <div>
   </section>
 
   <section id="concept">
     <div>
       <div>
+        <h2>Le concept</h2>
         <article>
           <img src="/img/elabomobile-itinerance.jpg" />
-          <h2>En itinérance</h2>
+          <h3>En itinérance</h3>
           <p>
             Différents lieux (et leurs habitants) accueillent l'élabomobile,
             chacun leur tour, le temps d'une journée.
@@ -34,7 +62,7 @@
         </article>
         <article>
           <img src="/img/elabomobile-coworkers.jpg" />
-          <h2>Ouvert à tous&nbsp;!</h2>
+          <h3>Ouvert à tous&nbsp;!</h3>
           <p>
             Professionnels, habitants ou simples passants, quel que soit votre âge,
             que ce soit pour travailler seul, en groupe ou simplement être là,
@@ -44,7 +72,7 @@
         </article>
         <article>
           <img src="/img/elabomobile-lieux.jpg" />
-          <h2>Un espace d'activité libre</h2>
+          <h3>Un espace d'activité libre</h3>
           <p>
             Trait d'union entre plusieurs acteurs, l'élabomobile propose un
             environnement propice aux activités, rencontres et échanges.
@@ -54,7 +82,7 @@
         </article>
         <article>
           <img src="/img/elabomobile-elabomobile.jpg" />
-          <h2>L'élabomobile</h2>
+          <h3>L'élabomobile</h3>
           <p>
             L'élabomobile pose un cadre et tisse des liens.
             Un zeste de logistique, une pincée de communication...
@@ -70,7 +98,7 @@
     <div>
       <div>
         <article>
-          <h2>Pour quoi faire&nbsp;?</h2>
+          <h3>Pour quoi faire&nbsp;?</h3>
           <ul>
             <li>Développer ses projets&nbsp;;</li>
             <li>suivre un atelier ou une formation&nbsp;;</li>
@@ -80,7 +108,7 @@
           </p>
         </article>
         <article>
-          <h2>Qu'est-ce qu'on y trouve&nbsp;?</h2>
+          <h3>Qu'est-ce qu'on y trouve&nbsp;?</h3>
           <ul>
             <li>Une connexion internet, des tables, des chaises&nbsp;;</li>
             <li>le matériel pour une petite conférence&nbsp;;</li>
@@ -97,8 +125,9 @@
   <section id="vision">
     <div>
       <div>
+        <h2>La philosophie</h2>
         <article>
-          <h2>Nomade</h2>
+          <h3>Nomade</h3>
           <div>
             <p>
               Léger, <strong>libre</strong>, joyeux<br />
@@ -109,7 +138,7 @@
           </div>
         </article>
         <article>
-          <h2>Durable</h2>
+          <h3>Durable</h3>
           <p>
             Rechercher, expérimenter et transmettre
             des solutions pour exercer nos activités
@@ -119,7 +148,7 @@
           </p>
         </article>
         <article>
-          <h2>Propulsion collective</h2>
+          <h3>Propulsion collective</h3>
           <p>
             Investir dans le développement collectif,
             tisser des liens,
@@ -131,7 +160,7 @@
           </p>
         </article>
         <article>
-          <h2>Changer de perspective</h2>
+          <h3>Changer de perspective</h3>
           <p>Déplacer le corps, déplacer l'esprit,
           sortir de la routine,
           se libérer des entraves, 
@@ -143,56 +172,63 @@
     </div>
   </section>
 
-  <section id="prototype">
-    <div>
-      <div>
-        <article>
-          <img src="/img/elabomobile-bayonne-saint-esprit.jpg" />
-          <h2>Lancement à Bayonne St Esprit</h2>
-          <p>
-            Identité, mixité sociale, vitalité culturelle et associative, enjeux
-            d'urbanisation, histoire, flux de déplacements...
-            Le quartier Saint Esprit à Bayonne est à la fois source d'inspiration
-            et terrain d'expérimentation idéal pour l'élabomobile.
-          </p>
-        </article>
-        <article>
-          <img src="/img/elabomobile-quintuplette.jpg" />
-          <h2>Aidez-nous à relever le défi&nbsp;!</h2>
-          <p>
-            Notre ambition&nbsp;:
-            réunir en moyenne 15 personnes,
-            une journée par semaine,
-            en itinérance dans 5 lieux emblématiques du quartier.
-          </p>
-          <p>
-            <strong>Nous recherchons hôtes et personnes motivées pour lancer les premières sessions&nbsp;!</strong>
-            <a href="#coordonnees">Contactez-nous&nbsp;!</a>
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <div id="map">
-    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
-    <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-    <div id="map_container"></div>
-  </div>
-
   <section id="contacts">
     <div>
       <div>
-        <article>
-          <h2>Des questions&nbsp;?</h2>
-          <p>Envie de participer&nbsp;? Envie de mieux comprendre les motivations ou le fonctionnement&nbsp;? Envie d'appliquer ces principes à un autre territoire&nbsp;? Nous serons ravis d'en discuter&nbsp;!
+        <h2>L'équipe</h2>
+        <article class="person">
+          <img src="/img/benoit-bryon.jpg" />
+          <h3>Benoît Bryon</h3>
+          <blockquote>
+            Co-fondateur de l'élabomobile, j'en propulse le lancement.
+          </blockquote>
+          <p class="links">
+            <a href="http://nosmainsnues.com"><span class="fa fa-address-card"> </span> nos<strong>mains</strong>nues.com</a>
           </p>
         </article>
+        <article class="person">
+          <h3>Fanny Lescourret</h3>
+          <blockquote>
+            Co-fondatrice de l'élabomobile, je veille à sa raison d'être.
+          </blockquote>
+          <p class="links">
+            <a href="http://lescourret.archi"><span class="fa fa-address-card"> </span> lescourret.archi</a>
+          </p>
+        </article>
+        <article class="person">
+          <img src="/img/laurent-gattegno.jpg" />
+          <h3>Laurent Gattegno</h3>
+          <blockquote>
+            Je contribue à la communication de l'élabomobile&nbsp;: rédaction,
+            réseaux sociaux, ...
+          </blockquote>
+          <p class="links">
+            <a href="http://seora.fr"><span class="fa fa-address-card"> </span> seora.fr</a>
+          </p>
+        </article>
+        <article class="person">
+          <img src="/img/anonyme.png" />
+          <h3>... et vous !</h3>
+          <blockquote>
+            L'élabomobile est développée comme un bien commun&nbsp;!
+            Rejoignez-nous pour amener ce projet plus loin :)
+          </blockquote>
+        </article>
+
         <article class="coordonnees" id="coordonnees">
-          <h2>Contacts</h2>
-          <p>
-            Fanny Lescourret &amp; Benoît Bryon<br />
-            contact@elabomobile.org<br />
-            06&nbsp;74&nbsp;49&nbsp;68&nbsp;81
+          <ul>
+            <li>
+              <span class="fa fa-fw fa-envelope"> </span>
+              <a href="mailto:contact@elabomobile.org">contact@elabomobile.org</a>
+            </li>
+            <li>
+              <span class="fa fa-fw fa-phone"> </span>
+              06&nbsp;74&nbsp;49&nbsp;68&nbsp;81
+            </li>
+            <li>
+              <span class="fa fa-fw fa-facebook-official"> </span>
+              <a href="https://www.facebook.com/elabomobile">elabomobile</a>
+            </li>
           </p>
         </article>
       </div>

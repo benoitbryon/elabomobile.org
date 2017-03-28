@@ -3,27 +3,33 @@ body#index {
     > div {
       @include make-container();
       @include media-breakpoint-up(lg) {
-        @include make-container-max-widths();
+      @include make-container-max-widths();
       }
       > div {
         @include make-row();
         padding-top: $header-height;
         padding-bottom: $header-height;
-
-        border-width: 0 0 5px 0;
+        border-width: 0;
         border-color: $color-subtitle;
 	border-style: solid;
-
-        h2 {
+	h2 {
+          @include make-col(12);
+          @include media-map-up(font-size, 1.5rem, 1.7rem, 2rem, 2.5rem, 3rem);
+	  text-align: center;
+	  border-width: 0 0 3px 0;
+	  border-style: solid;
+	  border-color: $color-subtitle;
+	  color: $color-subtitle;
+	  margin-bottom: 1em;
+          font-size: 3rem;
+	}
+        h3 {
           color: #000;
-          @include media-breakpoint-up(xs) { font-size: 1.3rem; }
-          @include media-breakpoint-up(sm) { font-size: 1.5rem; }
-          @include media-breakpoint-up(md) { font-size: 1.7rem; }
-          @include media-breakpoint-up(lg) { font-size: 2rem; }
-          @include media-breakpoint-up(xl) { font-size: 2rem; }
+          @include media-map-up(font-size, 1.3rem, 1.5rem, 1.7rem, 2rem, 2rem);
+          @include media-map-up(line-height, 2rem, 2rem, 2rem, 2rem, 2rem);
         }
         article {
-          @include make-col-ready(100%);
+          @include make-col-ready();
           @include media-breakpoint-up(xs) { @include make-col(12); }
           @include media-breakpoint-up(sm) { @include make-col(12); }
           @include media-breakpoint-up(md) { @include make-col(6); }
@@ -36,16 +42,20 @@ body#index {
   section#tagline {
     > div {
       > div {
-        padding: $header-height $header-height 0 $header-height;
+        padding: 0;
 	border-width: 0;
         h1 {
-          @include media-breakpoint-up(xs) { font-size: 2rem; }
-          @include media-breakpoint-up(sm) { font-size: 3rem; }
-          @include media-breakpoint-up(md) { font-size: 4rem; }
-          @include media-breakpoint-up(lg) { font-size: 5rem; }
-          @include media-breakpoint-up(xl) { font-size: 7rem; }
-          line-height: .8em;
+          @include make-col(12);
+          @include media-map-up(font-size, 3rem, 4rem, 5rem, 6rem, 7rem);
+          @include media-map-up(padding-left, 20px, 40px, 60px, 80px, 100px);
+          line-height: .9em;
           color: $color-title;
+        }
+        blockquote {
+          @include media-map-up(font-size, 1.1rem, 1.2rem, 1.3rem, 1.5rem, 2rem);
+          @include media-map-up(padding-left, 20px, 40px, 60px, 80px, 100px);
+          position: relative;
+          line-height: 1.2em;
         }
         p {
           width: 100%;
@@ -60,27 +70,80 @@ body#index {
       }
     }
   }
-  section#invitation {
-    > div {
+  section#rendezvous {
+     > div {
       > div {
-        color: $color-subtitle;
-	padding: 0;
         article {
+	  padding: 0;
           @include make-col(12);
-          padding-top: $header-height;
-          padding-bottom: $header-height;
-	  margin: 2px 0;
-          border-width: 1px 0;
-          border-color: $color-subtitle;
-          border-style: solid;
-          p {
-            font-family: $font-subtitle;
-            @include media-breakpoint-up(xs) { font-size: 1.3rem; }
-            @include media-breakpoint-up(sm) { font-size: 1.5rem; }
-            @include media-breakpoint-up(md) { font-size: 1.7rem; }
-            @include media-breakpoint-up(lg) { font-size: 2rem; }
-            @include media-breakpoint-up(xl) { font-size: 2rem; }
-            text-align: center;
+	  position: relative;
+	  background-color: #fff;
+          img {
+            @include media-map-up(width, 300px, 300px, 350px, 400px, 450px);
+            @include media-breakpoint-up(md) {
+              float: left;
+	      margin-right: 20px;
+            }
+	    border-width: 5px 0 0 0;
+	    border-color: $color-subtitle;
+	    border-style: solid;
+	  }
+	  h2 {
+	    padding-top: 1rem;
+	    line-height: 1.1em;
+	    font-weight: normal;
+	    border-width: 5px 0 0 0;
+	    border-color: transparent;
+	    border-style: solid;
+	    color: $color-subtitle;
+            text-align: left;
+            margin-bottom: 0;
+	  }
+	  .date {
+            position: absolute;
+	    top: 0px;
+            @include media-map-up(left, 150px, 150px, 200px, 250px, 300px);
+	    width: 120px;
+	    background-color: white;
+	    border-width: 0 5px 5px 5px;
+	    border-color: $color-subtitle;
+	    border-style: solid;
+	    color: $color-subtitle;
+	    padding: 10px;
+	    text-align: center;
+	    span {
+	      clear: both;
+	      display: block;
+	    }
+	    .dayname {
+	      font-size: 0.8rem;
+	      line-height: 1em;
+	    }
+	    .day {
+	      font-size: 2.5rem;
+	      font-weight: bold;
+	      line-height: 1.1em;
+	    }
+	    .month {
+	      font-size: 1.1rem;
+	      line-height: 0.9em;
+	    }
+	  }
+	  .location {
+	    font-size: 1.1rem;
+	    line-height: 0.9em;
+	  }
+	  ul {
+	    list-style-type: none;
+	    padding: 0;
+	    margin: 0;
+	    color: #606060;
+	  }
+	  .actions {
+	    margin: 1em 0 0 0;
+	    text-align: center;
+            a {
+	    }
           }
         }
       }
@@ -103,37 +166,16 @@ body#index {
       border-style: solid;
       > div {
         background-color: $color-subtitle;
-//        border-radius: 0 0 20px 20px;
 	padding-top: $header-height / 3;
 	padding-bottom: $header-height / 3;
-	h2 {
+	h3 {
 	  color: white;
           font-family: $font-subtitle;
+          line-height: 3rem;
         }
       }
     }
   }
-  section#prototype {
-    > div {
-      color: white;
-      border-color: #f49e56;
-      border-style: solid;
-      border-width: 1px 0 0 0;
-      padding-top: 2px;
-      > div {
-        background-color: #f49e56;
-        border-width: 0;
-	padding-top: $header-height / 3;
-	padding-bottom: $header-height / 3;
-        h2 {
-          color: white;
-          font-family: $font-subtitle;
-	  font-size: 1.7rem;
-        }
-      }
-    }
-  }
-
   section#vision {
     > div {
       > div {
@@ -145,40 +187,45 @@ body#index {
     > div {
       > div {
         border-width: 0;
-        article{
-          &.coordonnees {
-            @include media-breakpoint-up(xs) { font-size: 1.2rem; }
-            @include media-breakpoint-up(sm) { font-size: 1.2rem; }
-            @include media-breakpoint-up(md) { font-size: 1.4rem; }
-            @include media-breakpoint-up(lg) { font-size: 1.5rem; }
-            @include media-breakpoint-up(xl) { font-size: 1.5rem; } 
-            font-family: $font-subtitle;
+	article.person {
+          @include media-breakpoint-up(xs) { @include make-col(12); }
+          @include media-breakpoint-up(sm) { @include make-col(12); }
+          @include media-breakpoint-up(md) { @include make-col(6); }
+          @include media-breakpoint-up(lg) { @include make-col(6); }
+          @include media-breakpoint-up(xl) { @include make-col(6); } 
+          min-height: 5rem;
+	  img {
+            width: 5rem;
+            float: left;
+            margin: 0 20px 20px 0;
+          }
+          blockquote {
+            
+          }
+          .links {
+            float: right;
+            margin: -1em 1em 0 0;
+          }
+        }
+        article.coordonnees {
+          @include make-col(12);
+          margin: 3rem auto 1rem auto;
+	  ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+            li {
+	      margin: 0.5em 0;
+	      text-align: center;
+	      font-size: 2rem;
+              font-family: $font-subtitle;
+              .fa {
+		margin: 0 auto;
+	      }
+	    }
           }
         }
       }
-    }
-  }
-  #map {
-    clear: both;
-    height: 300px;
-    @include make-container();
-    @include media-breakpoint-up(lg) {
-      @include make-container-max-widths();
-    }
-    padding: 0;
-    padding-bottom: 2px;
-    margin: 0 auto;
-      border-color: #f49e56;
-      border-style: solid;
-      border-width: 0 0 1px 0;
-    > div {
-      background-color: white;
-      width: 100%;
-      height: 100%;
-      border-color: #f49e56;
-      border-style: solid;
-      border-width: 0 0 5px 0;
-//      border-radius: 0 0 20px 20px;
     }
   }
 }

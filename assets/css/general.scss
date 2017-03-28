@@ -6,8 +6,8 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  padding: 0 0 $footer-height 0;
-  @include media-breakpoint-down(sm) { padding-top: 0px; }
+  @include media-breakpoint-down(sm) { padding: 0; }
+  @include media-breakpoint-up(sm) { padding: 0 0 $footer-height 0; }
   background-color: $color-body-bg;
   font-family: $font-standard;
   @if $debug {
