@@ -12,6 +12,9 @@
   }
 
   $(document).ready(function() {
-    draw_map('map_container');
+    $('#rendezvous > div > div').slick({
+      dots: true
+    });
+    prev_arrow = $('.slick-prev');
   });
 })(jQuery);

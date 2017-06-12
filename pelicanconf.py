@@ -8,11 +8,13 @@ SITENAME = u"L'élabomobile"
 SITEURL = 'http://elabomobile.org'
 
 PATH = 'content'
+SLUGIFY_SOURCE = 'basename'
+FILENAME_METADATA = '(?P<slug>.*)'
 PAGE_PATHS = ['pages']
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
-ARTICLE_PATHS = ['projets']
-ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_PATHS = ['evenements']
+ARTICLE_SAVE_AS = 'evenements/{slug}.html'
 INDEX_SAVE_AS = 'index.html'
 STATIC_PATHS = ['']
 USE_FOLDER_AS_CATEGORY = False
@@ -39,3 +41,7 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
+
+PLUGINS = [
+    'pelican_fontawesome',
+]

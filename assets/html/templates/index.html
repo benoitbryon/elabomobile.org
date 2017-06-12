@@ -18,37 +18,36 @@
     </div>
   </section>
 
+  {# Articles #}
   <section id="rendezvous">
     <div>
       <div>
-        <article>
-          <img src="/img/2017-04-03-17h00-bilan-01.jpg" />
-          <h2>1, 2, 3... Allons-y&nbsp;!</h2>
-          <p class="date">
-            <span class="dayname">Lundi</span>
-            <span class="day">22</span>
-            <span class="month">mai</span>
-          </p>
-          <p class="location">
-            chez <a href="http://www.grenadine-et-crayonnade.fr/plan-dacces/">Grenadine et Crayonnade</a>, Anglet
-            <br />
-            Ouverture de 9h à 17h30
-            <br />
-            Tarif libre et responsable
-          </p>
-          <ul>
-            <li><span class="fa fa-comments-o fa-fw"> </span> Coworking</li>
-            <li><span class="fa fa-graduation-cap fa-fw"> </span> Rencontre thématique &laquo;&nbsp;Gouvernance partagée&nbsp;&raquo;</li>
-            <li><span class="fa fa-cutlery fa-fw"> </span> 12h30 &ndash; Repas partagé</li>
-            <li><span class="fa fa-star fa-fw"> </span> 14h &ndash; Défi&nbsp;: bien vivre avec nos boîtes e-mail</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn-primary btn-lg" href="https://goo.gl/forms/SiH6QwgkD9XxkQpi1"><span class="fa fa-sign-in"> </span> Je m'inscris</a>
-            <a class="btn btn-secondary" href="http://eepurl.com/cIDkrn"><span class="fa fa-envelope"> </span> Je m'abonne à la newsletter</a>
-          </div>
-        </article>
-      <div>
-    <div>
+        {% for article in articles %}
+          {% set illustrations = article.metadata.illustrations.split(' ') %}
+          <article>
+            <img src="./img/{{ illustrations[0] }}" />
+            <h2>{{ article.title }}</h2>
+            <p class="date">
+              <span class="dayname">{{ article.date.strftime('%A') }}</span>
+              <span class="day">{{ article.date.strftime('%d') }}</span>
+              <span class="month">{{ article.date.strftime('%B') }}</span>
+            </p>
+            <p class="location">
+              chez <a href="{{ article.location_url }}">{{ article.location_name }}</a>,
+              {{ article.location_city }}
+              <br />
+              {{ article.schedule }}
+              <br />
+              {{ article.fee }}
+            </p>
+            {{ article.content }}
+            <div class="actions">
+              <a class="btn btn-primary btn-lg" href="{{ article.registration_url }}"><span class="fa fa-sign-in"> </span> Je m'inscris</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
   </section>
 
   <section id="concept">
@@ -233,6 +232,10 @@
             <li>
               <span class="fa fa-fw fa-facebook-official"> </span>
               <a href="https://www.facebook.com/elabomobile">elabomobile</a>
+            </li>
+            <li>
+              <span class="fa fa-fw fa-newspaper-o"> </span>
+              <a href="http://eepurl.com/cIDkrn">Newsletter</a>
             </li>
           </p>
         </article>

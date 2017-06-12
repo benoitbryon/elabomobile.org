@@ -70,16 +70,40 @@ body#index {
       }
     }
   }
+  .slick-prev:before,
+  .slick-next:before {
+    color: $color-subtitle;
+    font-size: 40px;
+  }
+  .slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+  }
+  .slick-prev {
+    left: 0px;
+  }
+  .slick-next {
+    right: 0px;
+  }
+  .slick-list {
+    z-index: 1;
+  }
+  .slick-slider { position: relative; }
+  .slick-dots li button:before {
+    font-size: 1.5rem;
+  }
   section#rendezvous {
      > div {
       > div {
         article {
 	  padding: 0;
+	  margin: 0 40px;
           @include make-col(12);
 	  position: relative;
 	  background-color: #fff;
           img {
-            @include media-map-up(width, 300px, 300px, 350px, 400px, 450px);
+            @include media-map-up(width, 300px, 300px, 345px, 390px, 450px);
             @include media-breakpoint-up(md) {
               float: left;
 	      margin-right: 20px;
