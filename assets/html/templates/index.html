@@ -21,8 +21,8 @@
   {# Articles #}
   <section id="rendezvous">
     <div>
-      <div>
-        {% for article in articles %}
+      <div class="slider">
+        {% for article in articles[::-1] %}
           {% set illustrations = article.metadata.illustrations.split(' ') %}
           <article>
             <img src="./img/{{ illustrations[0] }}" />
@@ -33,7 +33,7 @@
               <span class="month">{{ article.date.strftime('%B') }}</span>
             </p>
             <p class="location">
-              chez <a href="{{ article.location_url }}">{{ article.location_name }}</a>,
+              <a href="{{ article.location_url }}">{{ article.location_name }}</a>,
               {{ article.location_city }}
               <br />
               {{ article.schedule }}
@@ -45,6 +45,16 @@
               <a class="btn btn-primary btn-lg" href="{{ article.registration_url }}"><span class="fa fa-sign-in"> </span> Je m'inscris</a>
             </div>
           </article>
+        {% endfor %}
+      </div>
+      <div class="slider-nav">
+        {% for article in articles[::-1] %}
+          <div class="bivouac" date="{{ article.date.isoformat() }}">
+            <div>
+                <img src="./img/{{ article.slug }}-mini.jpg" />
+              <p class="overlay"></p>
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>

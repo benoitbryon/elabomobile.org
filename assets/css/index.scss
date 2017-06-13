@@ -93,9 +93,45 @@ body#index {
   .slick-dots li button:before {
     font-size: 1.5rem;
   }
+  .slider-nav {
+    .slick-disabled {
+      opacity: 0;
+    }
+    .bivouac {
+      position: relative;
+      padding: 10px 30px;
+      img {
+        width: 100%;
+	position: relative;
+	border-width: 20px;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: $color-subtitle;
+      }
+      &.slick-slide {
+	> div {
+          opacity: 0.6;
+        }
+      }
+      &.slick-current {
+	> div {
+          display: block;
+          opacity: 1;
+	}
+      }
+    }
+  }
   section#rendezvous {
+    .past img {
+      @include grayscale(.7);
+      opacity: 0.4;
+    }
      > div {
+      padding-top: $header-height;
+      padding-bottom: $header-height;
       > div {
+        padding-bottom: 20px;
+        padding-top: 0;
         article {
 	  padding: 0;
 	  margin: 0 40px;
