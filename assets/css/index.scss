@@ -44,16 +44,22 @@ body#index {
       > div {
         padding: 0;
 	border-width: 0;
+	img {
+	  position: absolute;
+	  top: -10px;
+	  left: 0;
+          @include media-map-up(width, 140px, 160px, 180px, 200px, 250px);
+	}
         h1 {
           @include make-col(12);
           @include media-map-up(font-size, 3rem, 4rem, 5rem, 6rem, 7rem);
-          @include media-map-up(padding-left, 20px, 40px, 60px, 80px, 100px);
+          @include media-map-up(padding-left, 160px, 180px, 200px, 250px, 300px);
           line-height: .9em;
           color: $color-title;
         }
         blockquote {
           @include media-map-up(font-size, 1.1rem, 1.2rem, 1.3rem, 1.5rem, 2rem);
-          @include media-map-up(padding-left, 20px, 40px, 60px, 80px, 100px);
+          @include media-map-up(padding-left, 160px, 180px, 200px, 250px, 300px);
           position: relative;
           line-height: 1.2em;
         }
@@ -134,7 +140,6 @@ body#index {
         padding-top: 0;
         article {
 	  padding: 0;
-	  margin: 0 40px;
           @include make-col(12);
 	  position: relative;
 	  background-color: #fff;
