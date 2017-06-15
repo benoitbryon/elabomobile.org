@@ -9,7 +9,6 @@ Lancement
 :schedule: Ouverture de 9h à 17h30
 :fee: Tarif libre et responsable
 :registration_url: https://goo.gl/forms/T4KjlZco8vYIK0va2
-:illustrations: grenadine-et-crayonnade.jpg
 
 * :fa:`fa-pencil-square-o fa-fw` Co-création de l'élabomobile
 * :fa:`fa-graduation-cap fa-fw` Rencontre thématique *« Gouvernance partagée »*

@@ -9,7 +9,6 @@
 :schedule: Ouverture de 9h à 17h30
 :fee: Tarif libre et responsable
 :registration_url: https://goo.gl/forms/SiH6QwgkD9XxkQpi1
-:illustrations: 2017-04-03-17h00-bilan-01.jpg
 
 * :fa:`fa-comments fa-fw` Coworking
 * :fa:`fa-graduation-cap fa-fw` Rencontre thématique *« Gouvernance partagée »*

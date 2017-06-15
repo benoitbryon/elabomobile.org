@@ -23,9 +23,8 @@
     <div>
       <div class="slider">
         {% for article in articles[::-1] %}
-          {% set illustrations = article.metadata.illustrations.split(' ') %}
           <article>
-            <img src="./img/{{ illustrations[0] }}" />
+            <img src="./img/{{ article.slug }}.jpg" />
             <h2>{{ article.title }}</h2>
             <p class="date">
               <span class="dayname">{{ article.date.strftime('%A') }}</span>

@@ -1,5 +1,5 @@
 ###########
-Imagination
+Inspiration
 ###########
 
 :date: 2017-07-11
@@ -8,7 +8,10 @@ Imagination
 :location_city: Bayonne
 :schedule: Ouverture de 9h à 18h
 :fee: Tarif libre et responsable
-:registration_url: https://goo.gl/forms/HVZeoi59PeGIonwr1
-:illustrations: 2016-06-17-spacejunk-soir.jpg
+:registration_url: https://goo.gl/forms/gcZlKqG3ijC2V5Jg2
 
-* :fa:`fa-pencil-square-o fa-fw` Programme à co-construire
+* :fa:`fa-pencil-square-o fa-fw` **Programme en co-construction**
+* :fa:`fa-comments fa-fw` 9h – Inter-projets : *« Comment engager de
+  nouveaux contributeurs ? »*
+* :fa:`fa-cutlery fa-fw` 12h30 – Repas partagé
+* :fa:`fa-laptop fa-fw` 9h-18h – Coworking

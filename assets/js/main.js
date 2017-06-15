@@ -42,7 +42,6 @@
     $('.slider').slick({
       arrows: false,
       infinite: false,
-      fade: true,
       asNavFor: '.slider-nav',
       initialSlide: next_rendezvous_index
     });
