@@ -46,7 +46,7 @@
       initialSlide: next_rendezvous_index
     });
     $('.slider-nav').slick({
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       asNavFor: '.slider',
       infinite: false,
