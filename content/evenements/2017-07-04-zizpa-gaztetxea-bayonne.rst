@@ -12,5 +12,6 @@ Racines
 
 * :fa:`fa-pencil-square-o fa-fw` **Programme en co-construction**
 * :fa:`fa-comments fa-fw` 9h00 – Rencontre inter-projets
+* :fa:`fa-comments fa-fw` 9h00-11h – Rencontre avec `Kilika <https://assokilika.wordpress.com/>`_ : des marionnettes pour le quartier ?
 * :fa:`fa-cutlery fa-fw` 12h30 – Repas partagé
 * :fa:`fa-laptop fa-fw` 9h00-18h – Coworking
