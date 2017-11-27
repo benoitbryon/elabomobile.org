@@ -28,9 +28,14 @@
             <img src="./img/{{ article.slug }}.jpg" />
             <h2>{{ article.title }}</h2>
             <p class="date">
+              {% if article.date_display %}
+              {{ article.date_display }}
+              {% else %}
               <span class="dayname">{{ article.date.strftime('%A') }}</span>
               <span class="day">{{ article.date.strftime('%d') }}</span>
               <span class="month">{{ article.date.strftime('%B') }}</span>
+              <span class="year">{{ article.date.strftime('%Y') }}</span>
+              {% endif %}
             </p>
             <p class="location">
               <a href="{{ article.location_url }}">{{ article.location_name }}</a>,
