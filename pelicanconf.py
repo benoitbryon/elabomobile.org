@@ -45,3 +45,4 @@ DEFAULT_PAGINATION = False
 PLUGINS = [
     'pelican_fontawesome',
 ]
+DIRECT_TEMPLATES = ['index', 'agenda']

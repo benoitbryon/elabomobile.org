@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_id %}agenda{% endblock %}
+{% block title %}L'élabomobile &ndash; Agenda{% endblock %}
+{% block logo %}{% endblock %}
+
+{% block content %}
+  {# External calendar integration #}
+  <section id="agenda">
+    <div>
+      <div>
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=ehc4cpbl9jn3ri019amolrq5kg%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FParis" style="border-width:0;height:400px;width:100%;" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ790goTRK2gFESZtW1WHDfOEJsQSf0x0CXm81IHM-qIT2NaCE03w237Ms__2osZNCra_im35wxZp4h/pub?embedded=true" style="height:800px;width:100%;" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
