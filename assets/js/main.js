@@ -1,4 +1,8 @@
 (function($) {
+  function getEventList() {
+    // https://developers.google.com/apis-explorer/#s/calendar/v3/calendar.events.list
+    // GET https://www.googleapis.com/calendar/v3/calendars/ehc4cpbl9jn3ri019amolrq5kg%40group.calendar.google.com/events?maxResults=20&orderBy=startTime&q=Agenda&singleEvents=true&timeMin=2018-09-01T00%3A00%3A00%2B02%3A00&fields=items(description%2Cend%2FdateTime%2Clocation%2Cstart%2FdateTime%2Csummary)&key={YOUR_API_KEY}
+  }
   function draw_map(container) {
     var map = L.map(container, {
       dragging: false,

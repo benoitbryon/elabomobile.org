@@ -11,18 +11,18 @@ body#index {
         padding-bottom: $header-height;
         border-width: 0;
         border-color: $color-subtitle;
-	border-style: solid;
-	h2 {
+        border-style: solid;
+        h2 {
           @include make-col(12);
           @include media-map-up(font-size, 1.5rem, 1.7rem, 2rem, 2.5rem, 3rem);
-	  text-align: center;
-	  border-width: 0 0 3px 0;
-	  border-style: solid;
-	  border-color: $color-subtitle;
-	  color: $color-subtitle;
-	  margin-bottom: 1em;
+          text-align: center;
+          border-width: 0 0 3px 0;
+          border-style: solid;
+          border-color: $color-subtitle;
+          color: $color-subtitle;
+          margin-bottom: .5em;
           font-size: 3rem;
-	}
+        }
         h3 {
           color: #000;
           @include media-map-up(font-size, 1.3rem, 1.5rem, 1.7rem, 2rem, 2rem);
@@ -127,6 +127,44 @@ body#index {
       }
     }
   }
+  section#themes {
+    > div {
+      > div {
+        article {
+          @include media-breakpoint-up(xs) { @include make-col(12); }
+          @include media-breakpoint-up(sm) { @include make-col(12); }
+          @include media-breakpoint-up(md) { @include make-col(12); }
+          @include media-breakpoint-up(lg) { @include make-col(6); }
+          @include media-breakpoint-up(xl) { @include make-col(6); } 
+          margin-bottom: 1em;
+          p {
+            margin: 0 auto;
+          }
+          ul.events {
+            list-style: none;
+            padding: 0;
+          }
+          &.highlight {
+            font-size: 1.5em;
+            @include make-col(12);
+          }
+          &.description {
+            font-size: .75em;
+          }
+          &.info {
+            @extend .alert;
+            @extend .alert-info;
+            font-size: 1.4em;
+          }
+          &.status {
+            @extend .alert;
+            @extend .alert-warning;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
   section#rendezvous {
     .past img {
       @include grayscale(.7);
@@ -139,7 +177,7 @@ body#index {
         padding-bottom: 20px;
         padding-top: 0;
         article {
-	  padding: 0;
+          padding: 0;
           @include make-col(12);
 	  position: relative;
 	  background-color: #fff;
